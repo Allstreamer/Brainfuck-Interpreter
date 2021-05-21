@@ -97,5 +97,5 @@ class BrainfuckInterpreter:
 if __name__ == "__main__":
     brain = BrainfuckInterpreter(cell_size=255)
     brain.read_program_from_file('program.txt')
-    #brain.read_program_from_string("+[.+]")
+    #brain.read_program_from_string("--<-<<+[+[<+>--->->->-<<<]>]<<--.<++++++.<<-..<<.<+.>>.>>.<<<.+++.>>.>>-.<<<+.")
     brain.run_program()
