@@ -12,7 +12,7 @@ class BrainfuckInterpreter:
         self.memoryTape = [0] * self.memorySize
         self.memoryPointer = 0
 
-        self.indentCounter = []
+        self.loopDepth = []
 
     def check_program_pointer(self):
         # Keep memory Pointer inside memory limits
@@ -80,14 +80,14 @@ class BrainfuckInterpreter:
                 self.memoryTape[self.memoryPointer] = ord(input_chr)
             elif code == '[':
                 if self.memoryTape[self.memoryPointer] != 0:
-                    self.indentCounter.append(self.programPointer)
+                    self.loopDepth.append(self.programPointer)
                 else:
                     self.jump_to_matching_bracket()
             elif code == ']':
                 if self.memoryTape[self.memoryPointer] != 0:
-                    self.programPointer = self.indentCounter[-1]
+                    self.programPointer = self.loopDepth[-1]
                 else:
-                    self.indentCounter.pop(len(self.indentCounter)-1)
+                    self.loopDepth.pop(len(self.loopDepth)-1)
 
             self.check_program_pointer()
             self.check_memory_cell()
