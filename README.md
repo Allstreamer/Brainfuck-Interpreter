@@ -34,8 +34,8 @@ Hello World! 255
 | Value Name | Pass Value Name | Default Value| Explanation |
 | ------------- | ------------- | ------------- | ------------- |
 | program | N/A | NULL | This stores the program that is executed when calling run_program() |
-| memorySize | memory_size | 255 | This defines how many memory cells the interpreter can use |
-| cellSize | cell_size | 3000 | This defines how high of a value a cell can store (These Values Are allways unsigned) |
+| cellSize | cell_size | 255 | This defines how many memory cells the interpreter can use |
+| memorySize | memory_size | 3000 | This defines how high of a value a cell can store (These Values Are allways unsigned) |
 
 #### Functions
 | Class Function Name | Explanation |
